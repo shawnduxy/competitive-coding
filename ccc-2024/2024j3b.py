@@ -10,11 +10,11 @@ bronze_count = 0
 for _ in range(n):
     score = int(input())
     if score == gold:
-        gold_count = gold_count + 1
+        gold_count += 1
     elif score == silver:
-        silver_count = silver_count + 1
+        silver_count += 1
     elif score == bronze:
-        bronze_count = bronze_count + 1
+        bronze_count += 1
     elif score > gold:
         bronze = silver
         bronze_count = silver_count

@@ -4,7 +4,7 @@ scores = [0] * 76
 
 for _ in range(n):
     s = int(input())
-    scores[s] = scores[s] + 1
+    scores[s] += 1
 
 gold = 0
 silver = 0

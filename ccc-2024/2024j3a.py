@@ -15,14 +15,14 @@ for i in a:
     if i == gold or i == silver:
         pass
     elif i == bronze:
-        count = count + 1
+        count += 1
     elif gold == 0:
         gold = i
     elif silver == 0:
         silver = i
     elif bronze == 0:
         bronze = i
-        count = count + 1
+        count += 1
     else:
         break
 

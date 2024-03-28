@@ -9,7 +9,7 @@ for _ in range(r):
 x = int(input())
 y = int(input())
 
-queue = [(x, y)]
+queue = [[x, y]]
 l = 1
 
 ss = 0
@@ -32,15 +32,15 @@ while l > 0:
 
     if loc[0] > 0 and patch[loc[0] - 1][loc[1]] != "*":
         l = l + 1
-        queue.append((loc[0] - 1, loc[1]))
+        queue.append([loc[0] - 1, loc[1]])
     if loc[0] < r - 1 and patch[loc[0] + 1][loc[1]] != "*":
         l = l + 1
-        queue.append((loc[0] + 1, loc[1]))
+        queue.append([loc[0] + 1, loc[1]])
     if loc[1] > 0 and patch[loc[0]][loc[1] - 1] != "*":
         l = l + 1
-        queue.append((loc[0], loc[1] - 1))
+        queue.append([loc[0], loc[1] - 1])
     if loc[1] < c - 1 and patch[loc[0]][loc[1] + 1] != "*":
         l = l + 1
-        queue.append((loc[0], loc[1] + 1))
+        queue.append([loc[0], loc[1] + 1])
 
 print(ss + 5 * mm + 10 * ll)
